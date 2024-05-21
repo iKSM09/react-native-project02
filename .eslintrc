@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "@react-native",
+    "plugin:@stylistic/disable-legacy"
+  ],
+  "plugins": [
+    "@stylistic"
+  ],
+  "rules": {
+    "@stylistic/quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
