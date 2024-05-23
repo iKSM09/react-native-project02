@@ -16,6 +16,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     isOpenNow = true,
     rating = 4,
     isClosedTemporarily = true,
+    placeId,
   } = restaurant;
 
   return (
@@ -25,7 +26,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Card.Title title={name} titleVariant="titleLarge" />
         <Card.Content>
           <View style={styles.iconContainer}>
-            <RestaurantRating rating={rating} />
+            <RestaurantRating rating={rating} placeId={placeId} />
             <RestaurantStatus
               isOpen={isOpenNow}
               isClosed={isClosedTemporarily}
