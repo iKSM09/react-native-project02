@@ -52,13 +52,7 @@ export default function TabLayout() {
         tabBarInactiveTintColor: MD3Colors.neutral60,
         tabBarStyle: {
           height: 64,
-          // borderWidth: 1,
-          // borderRadius: 50,
-          // borderColor: Colors.orange.default,
-          // borderTopColor: Colors.orange.default,
-          // backgroundColor: Colors.white.default,
         },
-
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: "bold",

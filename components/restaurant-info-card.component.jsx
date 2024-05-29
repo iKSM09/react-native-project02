@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { Button, Card, Text } from "react-native-paper";
+import { Card, Text } from "react-native-paper";
 
 import { RestaurantRating } from "./restaurant-rating.component";
 import { RestaurantStatus } from "./restaurant-status.component";
 
-export const RestaurantInfoCard = ({ restaurant = {} }) => {
+export const RestaurantInfoCard = ({ restaurant = {}, mode = "elevated" }) => {
   const {
     name = "Some Restaurant",
     icon = "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
@@ -21,7 +21,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
 
   return (
     <View>
-      <Card>
+      <Card mode={mode}>
         <Card.Cover key={name} source={{ uri: photos[0] }} />
         <Card.Title title={name} titleVariant="titleLarge" />
         <Card.Content>
@@ -35,10 +35,6 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
           </View>
           <Text variant="bodyMedium">{address}</Text>
         </Card.Content>
-        <Card.Actions>
-          <Button>Cancel</Button>
-          <Button>Ok</Button>
-        </Card.Actions>
       </Card>
     </View>
   );
